@@ -1,7 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 #include <windows.h>
-#include <stdlib.h>
 #include <winuser.h>
 #define U 1
 #define D 2
@@ -226,8 +226,8 @@ void gameOver(){
 }
 
 void generateFood(){
-    foodX = (rand()+2) %56 ;
-    foodY = (rand()+2) %26 ;
+    foodX = (rand()+3) %58 ;
+    foodY = (rand()+3) %27;
 }
 
 void drawFood(){
@@ -276,7 +276,6 @@ void startGame(){
             score++;
             generateFood();
             addTail(initSnake);
-
         }
     }
       gameOver();
