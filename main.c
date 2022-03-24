@@ -170,7 +170,7 @@ int colission(snake * tete){
 }
 
 int alive(snake * tete){
-    if(tete->x >= 58 || tete->x <= 2 || tete->y >= 27 || tete->y <= 2){
+    if(tete->x >= 58 || tete->x <= 2 || tete->y >= 26 || tete->y <= 2){
         return 0;
     }
     else{
@@ -226,8 +226,8 @@ void gameOver(){
 }
 
 void generateFood(){
-    foodX = (rand()+3) %58 ;
-    foodY = (rand()+3) %27;
+    foodX = (rand()+9) %59 +1;
+    foodY = (rand()+9) %27 +1;
 }
 
 void drawFood(){
